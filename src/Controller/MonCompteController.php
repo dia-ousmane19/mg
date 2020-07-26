@@ -8,12 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class MonCompteController extends AbstractController
 {
     /**
-     * @Route("/mon/compte", name="mon_compte")
+     * @Route("/mon-compte", name="mon_compte")
      */
     public function index()
     {
-        return $this->render('mon_compte/index.html.twig', [
-            'controller_name' => 'MonCompteController',
-        ]);
+        return $this->render('mon_compte/index.html.twig');
     }
 }
