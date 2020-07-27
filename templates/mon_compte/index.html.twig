@@ -6,11 +6,12 @@
 {% endblock %}
 
 {% block body %}
+
 <div class="d-flex" id="wrapper">
 
   <!-- Sidebar -->
   <div class="bg-light border-right" id="sidebar-wrapper">
-    <div class="sidebar-heading"><i class="fas fa-user-alt"></i>  Ousmane dia</div>
+    <div class="sidebar-heading"><i class="fas fa-user-alt"></i>Ousmane dia</div>
     <div class="list-group list-group-flush">
       <a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fas fa-house-user"></i> Accueil</a>
       <a href="#" class="list-group-item list-group-item-action bg-light"> <i class="fas fa-wrench"></i> Gestion de mot de passe</a>
@@ -35,7 +36,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link btn btn-sm btn-danger text-white " href="#"> <i class="fas fa-power-off"></i>  </a>
+            <a class="nav-link btn btn-sm btn-danger text-white " href="{{path("app_logout")}}"> <i class="fas fa-power-off"></i>  </a>
           </li>
 
         </ul>

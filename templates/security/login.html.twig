@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block body %}
+
 <form method="post" class="form-signin">
   {% if error %}
   <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -18,17 +19,16 @@
   {% endif %}
   <div class="text-center mb-4">
     <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1>
-    <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+    <h1 class="h3 mb-3 font-weight-normal text-white">Connectez-vous</h1>
   </div>
-  <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
+  <h1 class="h3 mb-3 font-weight-normal"></h1>
   <div class="form-label-group">
+    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Email address" class="form-control" required autofocus>
     <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
   </div>
   <div class="form-label-group">
+    <input type="password" name="password" id="inputPassword" placeholder="Password" class="form-control" required>
     <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" required>
   </div>
   <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
@@ -50,6 +50,7 @@
   #}
 
   <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
-  <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+  <button class="btn btn-lg btn-danger btn-block" type="submit">Inscription</button>
+  <p class="mt-5 mb-3 text-white text-center">&copy; 2017-2018</p>
 </form>
 {% endblock %}
